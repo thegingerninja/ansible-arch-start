@@ -10,6 +10,6 @@
 
   tasks:
     - import_tasks: tasks/packages.yml
-    - import_tacks: tasks/terminator.yml
+    - import_tasks: tasks/terminator.yml
       vars:
         username: paul
