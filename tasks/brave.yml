@@ -1,3 +1,18 @@
+- name: Install go
+  community.general.pacman:
+    name: go
+    state: present
+
+- name: Install go-tools
+  community.general.pacman:
+    name: go-tools
+    state: present
+
+- name: Install python-docutils
+  community.general.pacman:
+    name: python-docutils
+    state: present
+
 - name: Create a directory for installing odd software
   become_user: "{{ username }}"
   ansible.builtin.file:
