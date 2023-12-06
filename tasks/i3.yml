@@ -13,6 +13,11 @@
     name: flameshot
     state: present
 
+- name: Install Rofi for i3 program selecting
+  community.general.pacman:
+    name: rofi
+    state: present
+
 - name: Load my i3 config from Github
   become_user: "{{ username }}"
   ansible.builtin.git:

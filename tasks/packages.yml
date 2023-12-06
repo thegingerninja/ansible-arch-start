@@ -48,3 +48,7 @@
     name: nerd-fonts
     state: present
 
+- name: Install Ranger - Text File Explorer
+  community.general.pacman:
+    name: ranger
+    state: present
