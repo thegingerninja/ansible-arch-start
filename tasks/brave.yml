@@ -50,7 +50,7 @@
   become_user: "{{ username }}"
   ansible.builtin.command:
     chdir: "/home/{{ username }}/Installs/snapd"
-    cmd: /sbin/makepkg -si
+    cmd: /sbin/makepkg --syncdeps --noconfirm --needed --noprogressbar --install
     creates: /var/lib/snapd/snap
 
 - name: Enable Snapd
