@@ -16,5 +16,5 @@
 - name: Load my i3 config from Github
   become_user: "{{ username }}"
   ansible.builtin.git:
-    repo: https://github.com/thegingerninja/i3-conf
+    repo: https://github.com/thegingerninja/i3_conf
     dest: "/home/{{ username }}/.config/i3"
