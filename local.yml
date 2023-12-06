@@ -9,7 +9,7 @@
         upgrade: true
 
   tasks:
-    - include: tasks/packages.yml
-    - include: tasks/terminator.yml
+    - import_tasks: tasks/packages.yml
+    - import_tacks: tasks/terminator.yml
       vars:
         username: paul
