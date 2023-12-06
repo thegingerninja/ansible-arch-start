@@ -13,6 +13,17 @@
     name: python-docutils
     state: present
 
+- name: Install apparmor
+  community.general.pacman:
+    name: apparmor
+    state: present
+
+- name: Install squashfs-tools
+  community.general.pacman:
+    name: squashfs-tools
+    state: present
+
+
 - name: Create a directory for installing odd software
   become_user: "{{ username }}"
   ansible.builtin.file:
