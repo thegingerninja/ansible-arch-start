@@ -23,6 +23,16 @@
     name: squashfs-tools
     state: present
 
+- name: Install xfsprogs
+  community.general.pacman:
+    name: xfsprogs
+    state: present
+
+- name: Install autoconf-archive
+  community.general.pacman:
+    name: autoconf-archive
+    state: present
+
 
 - name: Create a directory for installing odd software
   become_user: "{{ username }}"
