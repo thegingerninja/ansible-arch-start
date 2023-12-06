@@ -1,0 +1,49 @@
+- name: Install build-essential to allow compiling for installs
+  community.general.pacman:
+    name: base-devel
+    state: present
+
+- name: Install Tree cmdline tool
+  community.general.pacman:
+    name: tree
+    state: present
+
+- name: Install htop process monitor tool
+  community.general.pacman:
+    name: htop
+    state: present
+
+- name: Install system info cmdline tool
+  community.general.pacman:
+    name: fastfetch
+    state: present
+
+- name: Install the Matrix
+  community.general.pacman:
+    name: cmatrix
+    state: present
+
+- name: Install the text based file exlporer
+  community.general.pacman:
+    name: ncdu
+    state: present
+
+- name: Install fish terminal
+  community.general.pacman:
+    name: fish
+    state: present
+
+- name: Install Flameshot
+  community.general.pacman:
+    name: flameshot
+    state: present
+
+- name: Install unzip
+  community.general.pacman:
+    name: unzip
+    state: present
+
+- name: Install Snapcraft for snaps package installs
+  community.general.pacman:
+    name: snapd
+    state: present

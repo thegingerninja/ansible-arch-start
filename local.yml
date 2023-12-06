@@ -1,0 +1,15 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  pre_tasks:
+    - name: update repositories with pacman -Syu
+      community.general.pacman:
+        update_cache: true
+        upgrade: true
+
+  tasks:
+    - include: tasks/packages.yml
+    - include: tasks/terminator.yml
+      vars:
+        username: paul
