@@ -13,6 +13,11 @@
     name: flameshot
     state: present
 
+- name: Install Icon Theme for rofi icons 
+  community.general.pacman:
+    name: papirus-icon-theme
+    state: present
+
 - name: Install Rofi for i3 program selecting
   community.general.pacman:
     name: rofi
