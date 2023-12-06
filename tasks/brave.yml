@@ -1,0 +1,28 @@
+- name: Create a directory for installing odd software
+  become_user: "{{ username }}"
+  ansible.builtin.file:
+    path: "/home/{{ username }}/Installs"
+    state: directory
+
+- name: Load Snapd from Arch aur
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://aur.archlinux.org/snapd.git
+    dest: "/home/{{ username }}/Installs/snapd"
+
+- name: Run makepkg -si
+  become_user: "{{ username }}"
+  ansible.builtin.command:
+    chdir: "/home/{{ username }}/Installs/snapd"
+    cmd: /sbin/makepkg -si
+    creates: /var/lib/snapd/snap
+
+- name: Enable Snapd
+  ansible.builtin.systemd_service:
+    state: started
+    name: snapd.socket
+
+- name: Install brave using snap
+  community.general.snap:
+    name:
+      brave

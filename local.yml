@@ -19,3 +19,6 @@
     - import_tasks: tasks/i3.yml
       vars:
         username: paul
+    - import_tasks: tasks/brave.yml
+      vars:
+        username: paul
