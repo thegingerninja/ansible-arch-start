@@ -13,3 +13,6 @@
     - import_tasks: tasks/terminator.yml
       vars:
         username: paul
+    - import_tasks: tasks/neovim.yml
+      vars:
+        username: paul
