@@ -1,0 +1,20 @@
+- name: Install Picom Compositor for X
+  community.general.pacman:
+    name: picom
+    state: present
+
+- name: Install Nitrogen for background wallpaper managment
+  community.general.pacman:
+    name: nitrogen
+    state: present
+
+- name: Make sure flameshot is installed for screen capture
+  community.general.pacman:
+    name: flameshot
+    state: present
+
+- name: Load my i3 config from Github
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/thegingerninja/i3-conf
+    dest: "/home/{{ username }}/.config/i3"
