@@ -42,8 +42,3 @@
   community.general.pacman:
     name: unzip
     state: present
-
-- name: Install Snapcraft for snaps package installs
-  community.general.pacman:
-    name: snapd
-    state: present
