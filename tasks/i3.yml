@@ -30,7 +30,7 @@
     dest: "/home/{{ username }}/.config/i3"
 
 - name: Create a directory for background images
+  become_user: "{{ username }}"
   ansible.builtin.file:
     path: "/home/{{ username }}/Images/Backgrounds"
     state: directory
-    mode: '0755'
