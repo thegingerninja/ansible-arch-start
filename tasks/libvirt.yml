@@ -23,7 +23,7 @@
 
 - name: Add user to the libvirt group
   ansible.builtin.user:
-    name: {{ username }}
+    name: "{{ username }}"
     group: libvirt
     append: yes
   
@@ -32,8 +32,4 @@
     name: libvirtd
     state: started
     enabled: yes
-
-
-
-
  
