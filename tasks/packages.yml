@@ -62,3 +62,9 @@
   community.general.pacman:
     name: obsidian
     state: present
+
+- name: Install Tor Browser
+  community.general.pacman:
+    name: torbrowser-launcher
+    state: present
+
