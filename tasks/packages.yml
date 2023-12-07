@@ -52,3 +52,13 @@
   community.general.pacman:
     name: ranger
     state: present
+
+- name: Install pavucontrol for sound control
+  community.general.pacman:
+    name: pavucontrol
+    state: present
+
+- name: Install Obsidian 
+  community.general.pacman:
+    name: obsidian
+    state: present
