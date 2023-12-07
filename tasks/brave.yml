@@ -55,8 +55,9 @@
 
 - name: Enable Snapd
   ansible.builtin.systemd_service:
-    state: started
     name: snapd.socket
+    state: started
+    enabled: yes
 
 - name: Install brave using snap
   community.general.snap:

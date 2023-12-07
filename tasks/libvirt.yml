@@ -1,0 +1,39 @@
+- name: Install necessary packages for Libvirt install
+  community.general.pacman:
+    name: [ 'libvirt', 'virt-manager', 'qemu', 'vde2', 'ebtables', 'dnsmasq', 'bridge-utils' ]
+    state: present
+
+
+- name: Configure libvirt unix_sock_group
+  ansible.builtin.lineinfile:
+    path: /etc/libvirt/libvirtd.conf
+    regexp: '^#\\s*unix_sock_group = .*$'
+    line: 'unix_sock_group = "libvirt"'
+
+- name: Configure libvirt unix_sock_rw_perms
+  ansible.builtin.lineinfile:
+    path: /etc/libvirt/libvirtd.conf
+    regexp: '^#\\s*unix_sock_rw_perms = .*$'
+    line: 'unix_sock_rw_perms = "0770"'
+
+- name: Make sure the libvirt group exists
+  ansible.builtin.group:
+    name: libvirt
+    state: present
+
+- name: Add user to the libvirt group
+  ansible.builtin.user:
+    name: {{ username }}
+    group: libvirt
+    append: yes
+  
+- name: Enable libvirtd Service
+  ansible.builtin.systemd_service:
+    name: libvirtd
+    state: started
+    enabled: yes
+
+
+
+
+ 

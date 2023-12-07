@@ -22,3 +22,7 @@
     - import_tasks: tasks/brave.yml
       vars:
         username: paul
+    - import_tasks: tasks/libvirt.yml
+      vars:
+        username: paul
+
