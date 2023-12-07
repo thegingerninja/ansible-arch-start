@@ -20,11 +20,11 @@
     name: libvirt
     state: present
 
-- name: Add user to the libvirt group
-  ansible.builtin.user:
-    name: "{{ username }}"
-    groups: libvirt
-    append: yes
+# - name: Add user to the libvirt group
+#  ansible.builtin.user:
+#   name: "{{ username }}"
+#     groups: libvirt
+#    append: yes
   
 - name: Enable libvirtd Service
   ansible.builtin.systemd_service:
