@@ -8,3 +8,8 @@
   ansible.builtin.git:
     repo: https://github.com/thegingerninja/terminator_conf
     dest: "/home/{{ username }}/.config/terminator"
+
+- name: Change the users shell to fish
+  ansible.builtin.user:
+    name: "{{ username }}"
+    shell: /sbin/fish
