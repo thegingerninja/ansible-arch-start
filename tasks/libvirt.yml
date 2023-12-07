@@ -1,8 +1,7 @@
 - name: Install necessary packages for Libvirt install
   community.general.pacman:
-    name: [ 'libvirt', 'virt-manager', 'qemu', 'vde2', 'ebtables', 'dnsmasq', 'bridge-utils' ]
+    name: [ 'libvirt', 'virt-manager', 'qemu', 'virt-viewer', 'vde2', 'ebtables', 'iptables', 'dnsmasq', 'bridge-utils' ]
     state: present
-
 
 - name: Configure libvirt unix_sock_group
   ansible.builtin.lineinfile:
