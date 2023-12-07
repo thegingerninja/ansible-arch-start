@@ -2,7 +2,7 @@
   community.general.pacman:
     name: [ 'virt-manager', 'qemu', 'virt-viewer', 'vde2', 'ebtables', 'iptables', 'dnsmasq', 'bridge-utils', 'libguestfs' ]
     state: present
-    extra_args: -Syy
+    update_cache: true
 
 - name: Configure libvirt unix_sock_group
   ansible.builtin.lineinfile:
