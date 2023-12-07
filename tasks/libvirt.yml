@@ -1,6 +1,6 @@
 - name: Install necessary packages for Libvirt install
   community.general.pacman:
-    name: [ 'virt-manager', 'qemu', 'virt-viewer', 'vde2', 'ebtables', 'iptables', 'dnsmasq', 'bridge-utils', 'libguestfs' ]
+    name: [ 'virt-manager', 'qemu', 'virt-viewer', 'vde2', 'ebtables', 'dnsmasq', 'bridge-utils', 'libguestfs' ]
     state: present
     update_cache: true
 
