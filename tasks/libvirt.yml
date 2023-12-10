@@ -3,6 +3,11 @@
     name: [ 'qemu', 'virt-manager', 'dnsmasq', 'dmidecode', 'vde2' ]
     state: present
 
+- name: Install extra virtio drivers
+  community.general.pacman:
+    name: [ 'virtio', 'virtio_pci', 'virtio_blk', 'virtio_net', 'virtio_ring', 'qemu-guest-agent' ]
+    state: present
+
 - name: Configure libvirt unix_sock_group
   ansible.builtin.lineinfile:
     path: /etc/libvirt/libvirtd.conf
