@@ -68,3 +68,7 @@
     name: torbrowser-launcher
     state: present
 
+- name: Install jq for JSON preprocessing
+  community.general.pacman:
+    name: jq
+    state: present
