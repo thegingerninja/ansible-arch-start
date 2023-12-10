@@ -1,6 +1,6 @@
 - name: Install necessary packages for Libvirt install
   community.general.pacman:
-    name: [ 'qemu', 'virt-manager', 'dnsmasq', 'dmidecode', 'vde2' ]
+    name: [ 'qemu', 'virt-manager', 'dnsmasq', 'dmidecode', 'vde2', 'bridge-utils' ]
     state: present
 
 - name: Install extra virtio drivers
