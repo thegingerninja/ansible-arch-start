@@ -5,7 +5,7 @@
 
 - name: Install extra virtio drivers
   community.general.pacman:
-    name: [ 'virtio_gpu', 'qemu-guest-agent' ]
+    name: [ 'virtio-gpu', 'qemu-guest-agent' ]
     state: present
 
 - name: Configure libvirt unix_sock_group
