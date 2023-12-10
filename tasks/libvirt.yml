@@ -5,9 +5,14 @@
 
 - name: Install extra virtio drivers
   community.general.pacman:
-    name: [ 'qemu-hw-display-virtio-gpu', 'qemu-hw-display-virtio-gpu-gl', 'qemu-hw-display-virtio-gpu-pci', 'qemu-hw-display-virtio-gpu-pci-gl', 'qemu-guest-agent', 'qemu-hw-usb-redirect' ]
+    name: [ 'qemu-hw-display-virtio-gpu', 'qemu-hw-display-virtio-gpu-gl', 'qemu-hw-display-virtio-gpu-pci', 'qemu-hw-display-virtio-gpu-pci-gl', 'qemu-guest-agent', 'qemu-hw-usb-redirect']
     state: present
-
+    
+- name: Install spice qemu drivers
+  community.general.pacman:
+    name: [ 'qemu-audio-spice', 'qemu-chardev-spice', 'qemu-ui-spice-app', 'spice-vdagent', 'spice', 'qemu-ui-spice-core', 'qemu-ui-spice-app' ]
+    state: present
+    
 - name: Configure libvirt unix_sock_group
   ansible.builtin.lineinfile:
     path: /etc/libvirt/libvirtd.conf
