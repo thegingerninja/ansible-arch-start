@@ -72,3 +72,18 @@
   community.general.pacman:
     name: jq
     state: present
+
+- name: Install The GIMP
+  community.general.pacman:
+    name: gimp
+    state: present
+
+- name: Install InkScape
+  community.general.pacman:
+    name: inkscape
+    state: present
+    
+- name: Install Libre Office Fresh
+  community.general.pacman:
+    name: libreoffice-fresh
+    state: present
