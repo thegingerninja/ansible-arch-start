@@ -2,3 +2,8 @@
   community.general.pacman:
     name: nvidia
     state: present
+    
+- name: Install the Nvidia Settings tool
+  community.general.pacman:
+    name: nvidia-settings
+    state: present
