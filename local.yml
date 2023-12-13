@@ -9,6 +9,7 @@
         upgrade: true
 
   tasks:
+    - import_tasks: tasks/nvidia.yml
     - import_tasks: tasks/packages.yml
     - import_tasks: tasks/terminator.yml
       vars:
