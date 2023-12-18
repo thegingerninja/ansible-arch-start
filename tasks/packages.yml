@@ -93,6 +93,11 @@
     name: thunar
     state: present
 
+- name: Install VLC
+  community.general.pacman:
+    name: vlc
+    state: present
+
 - name: Install DVD Backup utils
   community.general.pacman:
     name: [ dvdbackup, libdvdcss, dvdauthor ]
