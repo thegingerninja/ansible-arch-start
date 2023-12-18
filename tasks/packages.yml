@@ -87,3 +87,8 @@
   community.general.pacman:
     name: libreoffice-fresh
     state: present
+
+- name: Install Thunar File explorer
+  community.general.pacman:
+    name: thunar
+    state: present
