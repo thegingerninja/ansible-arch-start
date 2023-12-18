@@ -95,5 +95,5 @@
 
 - name: Install DVD Backup utils
   community.general.pacman:
-    names: [ dvdbackup, libdvdcss, dvdauthor ]
+    name: [ dvdbackup, libdvdcss, dvdauthor ]
     state: present
