@@ -110,5 +110,5 @@
     
 - name: Install pythons virtualenv
   community.general.pacman:
-    name: [ python-pip, python-virtualenv ]
+    name: [ python-pip, python-pipx, python-virtualenv ]
     state: present
