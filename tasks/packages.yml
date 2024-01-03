@@ -17,7 +17,12 @@
   community.general.pacman:
     name: fastfetch
     state: present
-
+    
+- name: Install locate
+  community.general.pacman:
+    name: mlocate
+    state: present
+    
 - name: Install the Matrix
   community.general.pacman:
     name: cmatrix
