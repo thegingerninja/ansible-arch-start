@@ -108,7 +108,7 @@
     name: [ dvdbackup, libdvdcss, dvdauthor ]
     state: present
     
-- name: Install AWS Cli
+- name: Install pythons virtualenv
   community.general.pacman:
-    name: aws-cli-v2
+    name: python-virtualenv
     state: present
