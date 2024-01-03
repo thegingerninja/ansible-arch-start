@@ -102,3 +102,8 @@
   community.general.pacman:
     name: [ dvdbackup, libdvdcss, dvdauthor ]
     state: present
+    
+- name: Install AWS Cli
+  community.general.pacman:
+    name: aws-cli-v2
+    state: present
