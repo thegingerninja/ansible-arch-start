@@ -1,0 +1,21 @@
+- name: Install Cups for Printing
+  community.general.pacman:
+    name: [ cups, cups-browsed, cups-pdf, system-config-printer ]
+    state: present
+
+- name: Enable the CUPS Service
+  ansible.builtin.systemd_service:
+    name: cups
+    state: started
+    enabled: yes
+
+- name: Make sure the lp group exists
+  ansible.builtin.group:
+    name: lp
+    state: present
+
+- name: Add user to the cups group
+  ansible.builtin.user:
+    name: "{{ username }}"
+    groups: lp
+    append: yes
