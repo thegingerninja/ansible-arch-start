@@ -112,3 +112,8 @@
   community.general.pacman:
     name: [ python-pip, python-pipx, python-virtualenv ]
     state: present
+
+- name: Install Cups for Printing
+  community.general.pacman:
+    name: [ cups, cups-browsed, cups-pdf, system-config-printer ]
+    state: present
