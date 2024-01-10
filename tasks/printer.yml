@@ -19,3 +19,9 @@
     name: "{{ username }}"
     groups: lp
     append: yes
+
+- name: Load the Brother brlaser drivers from git
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/pdewacht/brlaser.git
+    dest: "/home/{{ username }}/drivers/brlaser"
