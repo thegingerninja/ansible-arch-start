@@ -112,3 +112,8 @@
   community.general.pacman:
     name: [ python-pip, python-pipx, python-virtualenv ]
     state: present
+
+- name: Install cmake
+  community.general.pacman:
+    name: cmake
+    state: present
