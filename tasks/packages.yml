@@ -107,7 +107,12 @@
   community.general.pacman:
     name: [ dvdbackup, libdvdcss, dvdauthor ]
     state: present
-    
+
+- name: Install YouTube downloader
+  community.general.pacman:
+    name: yt-dlp
+    state: present
+
 - name: Install pythons virtualenv
   community.general.pacman:
     name: [ python-pip, python-pipx, python-virtualenv ]
