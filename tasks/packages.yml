@@ -122,3 +122,8 @@
   community.general.pacman:
     name: cmake
     state: present
+
+- name: Install CherryTree
+  community.general.pacman:
+    name: cherrytree
+    state: present
