@@ -127,3 +127,8 @@
   community.general.pacman:
     name: cherrytree
     state: present
+
+- name: Install PanDoc
+  community.general.pacman:
+    name: pandoc
+    state: present  
