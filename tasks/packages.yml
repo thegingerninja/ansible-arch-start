@@ -130,5 +130,5 @@
 
 - name: Install tools for md to pdf conversion
   community.general.pacman:
-    name: [ pandoc, texlive-basic ]
+    name: [ pandoc, texlive ]
     state: present  
