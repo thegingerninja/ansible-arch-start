@@ -128,7 +128,7 @@
     name: cherrytree
     state: present
 
-- name: Install PanDoc
+- name: Install tools for md to pdf conversion
   community.general.pacman:
-    name: pandoc
+    name: [ pandoc, texlive-basic ]
     state: present  
