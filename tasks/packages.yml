@@ -132,3 +132,8 @@
   community.general.pacman:
     name: [ pandoc, texlive ]
     state: present  
+
+- name: Install accounting application
+  community.general.pacman:
+    name: [ gnucash, gnucash-docs ]
+    state: present  
