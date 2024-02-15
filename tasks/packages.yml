@@ -136,4 +136,9 @@
 - name: Install accounting application
   community.general.pacman:
     name: [ gnucash, gnucash-docs ]
-    state: present  
+    state: present
+
+- name: Install Strawberry music player
+  community.general.pacman:
+    name: strawberry
+    state: present
