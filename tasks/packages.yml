@@ -115,7 +115,7 @@
 
 - name: Install pythons virtualenv
   community.general.pacman:
-    name: [ python-pip, python-pipx, python-virtualenv ]
+    name: [ python-pip, python-pipx, python-virtualenv, python-pipenv ]
     state: present
 
 - name: Install cmake
