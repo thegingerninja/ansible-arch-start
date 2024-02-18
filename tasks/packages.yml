@@ -95,7 +95,7 @@
 
 - name: Install Thunar File explorer
   community.general.pacman:
-    name: thunar
+    name: [ thunar, thunar-volman, udisks2, udiskie ]
     state: present
 
 - name: Install VLC
