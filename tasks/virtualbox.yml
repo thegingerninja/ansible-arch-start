@@ -1,6 +1,6 @@
 - name: Install necessary packages for VirtualBox install
   community.general.pacman:
-    name: [ 'virtualbox', 'virtualbox-guest-iso' ]
+    name: [ 'virtualbox', 'virtualbox-host-modules-arch' ]
     state: present
 
 - name: Make sure the vboxusers group exists
@@ -13,6 +13,11 @@
     name: "{{ username }}"
     groups: vboxusers
     append: yes
+
+- name: Load virtualbox kernel module
+  community.general.modprobe:
+    name: vboxdrv
+    state: present
 
 - name: Enable vboxweb Service
   ansible.builtin.systemd_service:
