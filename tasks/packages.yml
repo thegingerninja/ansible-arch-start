@@ -3,6 +3,11 @@
     name: base-devel
     state: present
 
+- name: Install headers for building modules for the linux kernel
+  community.general.pacman:
+    name: linux-headers
+    state: present
+
 - name: Install Tree cmdline tool
   community.general.pacman:
     name: tree
