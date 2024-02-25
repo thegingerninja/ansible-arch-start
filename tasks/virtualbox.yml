@@ -1,6 +1,6 @@
 - name: Install necessary packages for VirtualBox install
   community.general.pacman:
-    name: [ 'virtualbox' ]
+    name: [ 'virtualbox', 'python-pywinrm' ]
     state: present
 
 - name: Make sure the vboxusers group exists
