@@ -1,6 +1,6 @@
 - name: Install necessary packages for VirtualBox install
   community.general.pacman:
-    name: [ 'virtualbox', 'virtualbox-guest-iso' ]
+    name: [ 'virtualbox', 'virtualbox-guest-iso', 'virtualbox-host-modules-arch' ]
     state: present
 
 - name: Make sure the vboxusers group exists
