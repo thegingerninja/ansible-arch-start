@@ -142,3 +142,8 @@
   community.general.pacman:
     name: strawberry
     state: present
+
+- name: Install Vagrant VM builder
+  community.general.pacman:
+    name: vagrant
+    state: present
