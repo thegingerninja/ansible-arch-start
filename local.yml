@@ -26,6 +26,9 @@
     - import_tasks: tasks/libvirt.yml
       vars:
         username: paul
+    - import_tasks: tasks/virtualbox.yml
+      vars:
+        username: paul
     - import_tasks: tasks/pentesting.yml
     - import_tasks: tasks/printer.yml
       vars:
