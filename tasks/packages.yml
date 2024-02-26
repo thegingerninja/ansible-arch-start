@@ -152,3 +152,8 @@
   community.general.pacman:
     name: vagrant
     state: present
+    
+- name: Install gedit
+  community.general.pacman:
+    name: gedit
+    state: present
