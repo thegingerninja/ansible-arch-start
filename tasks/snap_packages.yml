@@ -1,4 +1,4 @@
-- name: Install VSCode using snap
+- name: Install VSCode using snap --classic
   community.general.snap:
-    name:
-      code
+    name: code
+    classic: yes
