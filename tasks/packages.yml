@@ -158,8 +158,3 @@
     name: gedit
     state: present
     
-- name: Install VS Code
-  community.general.pacman:
-    name: code
-    state: present
-    

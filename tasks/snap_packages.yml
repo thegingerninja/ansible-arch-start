@@ -1,0 +1,4 @@
+- name: Install VSCode using snap
+  community.general.snap:
+    name:
+      code
