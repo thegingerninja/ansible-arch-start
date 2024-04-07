@@ -3,6 +3,7 @@
     src: /snap
     dest: /var/lib/snapd/snap
     state: link
+    force: yes
 
 - name: Install VSCode using snap --classic
   community.general.snap:
