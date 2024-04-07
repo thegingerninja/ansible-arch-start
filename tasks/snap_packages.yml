@@ -1,7 +1,7 @@
 - name: Create snap symbolic link
   file:
-    src: /snap
-    dest: /var/lib/snapd/snap
+    src: /var/lib/snapd/snap
+    dest: /snap
     state: link
     force: yes
 
