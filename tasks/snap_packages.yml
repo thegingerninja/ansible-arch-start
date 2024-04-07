@@ -1,3 +1,9 @@
+- name: Create snap symbolic link
+  file:
+    src: "/snap"
+    dest: "/var/lib/snapd/snap"
+    state: link
+
 - name: Install VSCode using snap --classic
   community.general.snap:
     name: code
