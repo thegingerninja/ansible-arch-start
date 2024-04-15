@@ -9,3 +9,8 @@
   community.general.snap:
     name: code
     classic: yes
+
+- name: Install Android Studio using snap --classic
+  community.general.snap:
+    name: android-studio
+    classic: yes
