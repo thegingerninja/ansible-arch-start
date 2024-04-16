@@ -162,3 +162,8 @@
   community.general.pacman:
     name: yarn
     state: present
+    
+- name: Install tig
+  community.general.pacman:
+    name: tig
+    state: present
