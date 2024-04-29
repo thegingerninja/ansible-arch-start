@@ -167,3 +167,8 @@
   community.general.pacman:
     name: tig
     state: present
+
+- name: Install Android Tools
+  community.general.pacman:
+    name: android-tools
+    state: present
