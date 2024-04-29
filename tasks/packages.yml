@@ -172,3 +172,8 @@
   community.general.pacman:
     name: android-tools
     state: present
+
+- name: Install USB modeswtich
+  community.general.pacman:
+    name: usb_modeswitch
+    state: present
