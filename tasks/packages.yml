@@ -177,3 +177,9 @@
   community.general.pacman:
     name: usb_modeswitch
     state: present
+
+- name: Install Kubectl
+  community.general.pacman:
+    name: kubectl
+    state: present
+    
