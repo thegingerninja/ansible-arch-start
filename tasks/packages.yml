@@ -183,3 +183,8 @@
     name: kubectl
     state: present
     
+- name: Install Azure CLI
+  community.general.pacman:
+    name: azure-cli
+    state: present
+    
