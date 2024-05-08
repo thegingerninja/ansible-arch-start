@@ -188,3 +188,9 @@
     name: azure-cli
     state: present
     
+- name: Install Bluetooth
+  community.general.pacman:
+    name: [ bluez, bluez-utils, pulseaudio-bluetooth ]
+    state: present
+    
+    
