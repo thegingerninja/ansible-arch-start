@@ -190,7 +190,7 @@
     
 - name: Install Bluetooth
   community.general.pacman:
-    name: [ bluez, bluez-utils, pulseaudio-bluetooth ]
+    name: [ bluez, bluez-utils ]
     state: present
     
     
