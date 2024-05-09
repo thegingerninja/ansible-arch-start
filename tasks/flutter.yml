@@ -1,0 +1,5 @@
+- name: Load Flutter source from git
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/flutter/flutter.git
+    dest: "/home/{{ username }}/Documents/flutter"

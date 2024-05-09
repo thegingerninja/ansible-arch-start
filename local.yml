@@ -36,3 +36,6 @@
     - import_tasks: tasks/printer.yml
       vars:
         username: paul
+    - import_tasks: tasks/flutter.yml
+      vars:
+        username: paul
