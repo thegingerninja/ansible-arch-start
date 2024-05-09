@@ -39,3 +39,6 @@
     - import_tasks: tasks/flutter.yml
       vars:
         username: paul
+    - import_tasks: tasks/bluetooth.yml
+      vars:
+        username: paul
