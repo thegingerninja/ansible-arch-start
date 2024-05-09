@@ -19,3 +19,9 @@
   ansible.builtin.copy:
     content: "export PATH=$PATH:/home/{{ username }}/Installs/flutter/bin"
     dest: /etc/profile.d/flutter.sh
+
+- name: Add CHROME_EXECUTABLE environment setting
+  ansible.builtin.lineinfile:
+    path: /etc/profile.d/flutter.sh
+    line: 'export CHROME_EXECUTABLE="/var/lib/snapd/snap/brave/395/opt/brave.com/brave/brave-browser"'
+
