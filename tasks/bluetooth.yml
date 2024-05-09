@@ -1,6 +1,6 @@
 - name: Install Bluetooth
   community.general.pacman:
-    name: [ bluez, bluez-utils ]
+    name: [ bluez, bluez-utils, blueman, pulseaudio-bluetooth ]
     state: present
 
 - name: Enable bluetooth Service
