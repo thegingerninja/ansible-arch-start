@@ -9,3 +9,8 @@
   ansible.builtin.git:
     repo: https://github.com/flutter/flutter.git
     dest: "/home/{{ username }}/Installs/flutter"
+
+- name: Add flutter bin to the system PATH
+  ansible.builtin.copy:
+    content: "export PATH=$PATH:/home/{{ username }}/Installs/flutter/bin"
+    dest: /etc/profile.d/custom-path.sh
