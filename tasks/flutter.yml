@@ -1,3 +1,8 @@
+- name: Install extra dependencies required by Flutter
+  community.general.pacman:
+    name: [ clang, cmake, ninja ]
+    state: present
+
 - name: Make sure we have the folder for odd installs
   become_user: "{{ username }}"
   ansible.builtin.file:
