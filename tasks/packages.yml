@@ -188,3 +188,7 @@
     name: azure-cli
     state: present
     
+- name: Install Ripgrep
+  community.general.pacman:
+    name: ripgrep
+    state: present
