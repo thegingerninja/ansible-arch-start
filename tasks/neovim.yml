@@ -3,26 +3,8 @@
     name: neovim
     state: present
 
-# - name: Download the nvim packer manager from Github
-#   become_user: "{{ username }}"
-#   ansible.builtin.git:
-#     repo: https://github.com/wbthomason/packer.nvim
-#     dest: "/home/{{ username }}/.local/share/nvim/site/pack/packer/start/packer.nvim"
-#     depth: 1
-#
-# - name: Load my Neovim config from Github
-#   become_user: "{{ username }}"
-#   ansible.builtin.git:
-#     repo: https://github.com/thegingerninja/nvim-conf
-#     dest: "/home/{{ username }}/.config/nvim"
-
-# - name: Install NvChad Neovim config
-#  become_user: "{{ username }}"
-#  ansible.builtin.git:
-#    repo: https://github.com/NvChad/starter
-#    dest: "/home/{{ username }}/.config/nvim"
-#    depth: 1
-
-# After first opening nvim, let Lazy finish
-# Run :MasonInstallAll
-# Delete the .git folder from nvim folder
+- name: Load my Neovim config from Github
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/thegingerninja/lazy-nvim-conf
+    dest: "/home/{{ username }}/.config/nvim"
