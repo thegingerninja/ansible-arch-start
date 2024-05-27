@@ -158,9 +158,9 @@
     name: gedit
     state: present
     
-- name: Install yarn
+- name: Install node, yarn and npm (npx)
   community.general.pacman:
-    name: yarn
+    name: [ node, yarn, npm ]
     state: present
     
 - name: Install tig
