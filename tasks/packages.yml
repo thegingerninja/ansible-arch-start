@@ -160,7 +160,7 @@
     
 - name: Install node, yarn and npm (npx)
   community.general.pacman:
-    name: [ nodejs, yarn, npm ]
+    name: [ nodejs, yarn, npm, pnpm ]
     state: present
     
 - name: Install tig
