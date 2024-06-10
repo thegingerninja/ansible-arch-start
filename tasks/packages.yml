@@ -192,3 +192,8 @@
   community.general.pacman:
     name: ripgrep
     state: present
+
+- name: Install GitHub Command Line Interface
+  community.general.pacman:
+    name: github-cli
+    state: present
