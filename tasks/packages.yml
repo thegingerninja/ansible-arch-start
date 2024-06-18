@@ -18,6 +18,11 @@
     name: htop
     state: present
 
+- name: Install strace and lurk
+  community.general.pacman:
+    name: [ strace, lurk ]
+    state: present
+
 - name: Install system info cmdline tool
   community.general.pacman:
     name: fastfetch
