@@ -14,3 +14,9 @@
   community.general.snap:
     name: android-studio
     classic: yes
+
+- name: Install OpenTofu - Terraform
+  community.general.snap:
+    name: opentofu
+    classic: yes
+  
