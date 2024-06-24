@@ -205,5 +205,5 @@
     
 - name: Postgres Database
   community.general.pacman:
-    name: github-cli
-    state: postgresql
+    name: postgresql
+    state: present
