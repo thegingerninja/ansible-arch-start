@@ -207,3 +207,9 @@
   community.general.pacman:
     name: postgresql
     state: present
+    
+- name: OBS Streaming Software
+  community.general.pacman:
+    name: obs-studio
+    state: present
+
