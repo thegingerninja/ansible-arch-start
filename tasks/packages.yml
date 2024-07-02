@@ -215,5 +215,5 @@
     
 - name: Zathura Minimalistic document viewer
   community.general.pacman:
-    name: zathura
+    name: [ zathura, zathura-pdf-mupdf ]
     state: present
