@@ -212,4 +212,8 @@
   community.general.pacman:
     name: obs-studio
     state: present
-
+    
+- name: Zathura Minimalistic document viewer
+  community.general.pacman:
+    name: zathura
+    state: present
