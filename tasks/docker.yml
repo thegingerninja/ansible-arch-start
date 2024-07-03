@@ -1,0 +1,15 @@
+- name: Install Docker packages
+  community.general.pacman:
+    name: ["docker", "docker-compose"]
+    state: present
+
+- name: Make sure the docker group exists
+  ansible.builtin.group:
+    name: docker
+    state: present
+
+- name: Add user to the docker group
+  ansible.builtin.user:
+    name: "{{ username }}"
+    groups: docker
+    append: yes

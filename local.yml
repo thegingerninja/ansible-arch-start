@@ -42,3 +42,6 @@
     - import_tasks: tasks/bluetooth.yml
       vars:
         username: paul
+    - import_tasks: tasks/docker.yml
+      vars:
+        username: paul
