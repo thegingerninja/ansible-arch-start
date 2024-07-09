@@ -185,7 +185,7 @@
 
 - name: Install Kubectl
   community.general.pacman:
-    name: kubectl
+    name: [ kubectl, k9s ]
     state: present
     
 - name: Install Azure CLI
