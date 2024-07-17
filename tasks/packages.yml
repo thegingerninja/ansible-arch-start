@@ -20,19 +20,19 @@
 
 - name: Install strace and lurk
   community.general.pacman:
-    name: [ strace, lurk ]
+    name: [strace, lurk]
     state: present
 
 - name: Install system info cmdline tool
   community.general.pacman:
     name: fastfetch
     state: present
-    
+
 - name: Install locate
   community.general.pacman:
     name: mlocate
     state: present
-    
+
 - name: Install the Matrix
   community.general.pacman:
     name: cmatrix
@@ -73,7 +73,7 @@
     name: pavucontrol
     state: present
 
-- name: Install Obsidian 
+- name: Install Obsidian
   community.general.pacman:
     name: obsidian
     state: present
@@ -97,7 +97,7 @@
   community.general.pacman:
     name: inkscape
     state: present
-    
+
 - name: Install Libre Office Fresh
   community.general.pacman:
     name: libreoffice-fresh
@@ -105,7 +105,7 @@
 
 - name: Install Thunar File explorer
   community.general.pacman:
-    name: [ thunar, thunar-volman, udisks2, udiskie ]
+    name: [thunar, thunar-volman, udisks2, udiskie]
     state: present
 
 - name: Install VLC
@@ -115,7 +115,7 @@
 
 - name: Install DVD Backup utils
   community.general.pacman:
-    name: [ dvdbackup, libdvdcss, dvdauthor ]
+    name: [dvdbackup, libdvdcss, dvdauthor]
     state: present
 
 - name: Install YouTube downloader
@@ -125,7 +125,7 @@
 
 - name: Install pythons virtualenv
   community.general.pacman:
-    name: [ python-pip, python-pipx, python-virtualenv, python-pipenv ]
+    name: [python-pip, python-pipx, python-virtualenv, python-pipenv]
     state: present
 
 - name: Install cmake
@@ -140,12 +140,12 @@
 
 - name: Install tools for md to pdf conversion
   community.general.pacman:
-    name: [ pandoc, texlive ]
-    state: present  
+    name: [pandoc, texlive]
+    state: present
 
 - name: Install accounting application
   community.general.pacman:
-    name: [ gnucash, gnucash-docs ]
+    name: [gnucash, gnucash-docs]
     state: present
 
 - name: Install Strawberry music player
@@ -157,17 +157,17 @@
   community.general.pacman:
     name: vagrant
     state: present
-    
+
 - name: Install gedit
   community.general.pacman:
     name: gedit
     state: present
-    
+
 - name: Install node, yarn and npm (npx)
   community.general.pacman:
-    name: [ nodejs, yarn, npm, pnpm ]
+    name: [nodejs, yarn, npm, pnpm]
     state: present
-    
+
 - name: Install tig
   community.general.pacman:
     name: tig
@@ -183,16 +183,6 @@
     name: usb_modeswitch
     state: present
 
-- name: Install Kubectl
-  community.general.pacman:
-    name: [ kubectl, k9s ]
-    state: present
-    
-- name: Install Azure CLI
-  community.general.pacman:
-    name: azure-cli
-    state: present
-    
 - name: Install Ripgrep
   community.general.pacman:
     name: ripgrep
@@ -202,18 +192,18 @@
   community.general.pacman:
     name: github-cli
     state: present
-    
+
 - name: Postgres Database
   community.general.pacman:
     name: postgresql
     state: present
-    
+
 - name: OBS Streaming Software
   community.general.pacman:
     name: obs-studio
     state: present
-    
+
 - name: Zathura Minimalistic document viewer
   community.general.pacman:
-    name: [ zathura, zathura-pdf-mupdf ]
+    name: [zathura, zathura-pdf-mupdf]
     state: present
