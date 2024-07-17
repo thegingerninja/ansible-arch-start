@@ -1,6 +1,6 @@
 - name: Install Kubectl
   community.general.pacman:
-    name: [kubectl, k9s]
+    name: [kubectl, k9s, minikube]
     state: present
 
 - name: Install Azure CLI
