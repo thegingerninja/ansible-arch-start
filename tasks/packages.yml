@@ -12,7 +12,12 @@
   community.general.pacman:
     name: tree
     state: present
-
+    
+- name: Make sure less is installed
+  community.general.pacman:
+    name: less
+    state: present
+    
 - name: Install htop process monitor tool
   community.general.pacman:
     name: htop
