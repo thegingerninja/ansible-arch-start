@@ -1,0 +1,5 @@
+- name: Load Oh My Bash from git repo
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/thegingerninja/terminator_conf
+    dest: "/home/{{ username }}/.oh-my-bash"

@@ -46,3 +46,6 @@
       vars:
         username: paul
     - import_tasks: tasks/sysadmin.yml
+    - import_tasks: tasks/ohmybash.yml
+      vars:
+        username: paul
