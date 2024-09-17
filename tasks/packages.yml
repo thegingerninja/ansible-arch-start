@@ -212,3 +212,8 @@
   community.general.pacman:
     name: [zathura, zathura-pdf-mupdf]
     state: present
+
+- name: Very simple video editor
+  community.general.pacman:
+    name: [vidcutter]
+    state: present
