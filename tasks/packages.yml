@@ -12,12 +12,12 @@
   community.general.pacman:
     name: tree
     state: present
-    
+
 - name: Make sure less is installed
   community.general.pacman:
     name: less
     state: present
-    
+
 - name: Install htop process monitor tool
   community.general.pacman:
     name: htop
@@ -216,4 +216,9 @@
 - name: Very simple video editor
   community.general.pacman:
     name: [vidcutter]
+    state: present
+
+- name: Elixir programming lang
+  community.general.pacman:
+    name: [elixir, asdf]
     state: present
