@@ -220,5 +220,5 @@
 
 - name: Elixir programming lang
   community.general.pacman:
-    name: [elixir, asdf]
+    name: [elixir]
     state: present
