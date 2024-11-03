@@ -222,3 +222,8 @@
   community.general.pacman:
     name: [elixir]
     state: present
+
+- name: CD Buring tools
+  community.general.pacman:
+    name: [cdrdao, gcdmaster]
+    state: present
