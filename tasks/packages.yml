@@ -63,9 +63,9 @@
     name: unzip
     state: present
     
-- name: Install rar tools
+- name: Install unrar
   community.general.pacman:
-    name: [ rar, unrar ]
+    name: unrar
     state: present
     
 - name: Install all the Nerd fonts
