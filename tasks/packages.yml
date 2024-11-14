@@ -67,6 +67,11 @@
   community.general.pacman:
     name: unrar
     state: present
+
+- name: Install 7z
+  community.general.pacman:
+    name: p7zip
+    state: presen
     
 - name: Install all the Nerd fonts
   community.general.pacman:
