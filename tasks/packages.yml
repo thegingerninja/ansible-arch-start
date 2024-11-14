@@ -62,7 +62,12 @@
   community.general.pacman:
     name: unzip
     state: present
-
+    
+- name: Install rar tools
+  community.general.pacman:
+    name: [ rar, unrar ]
+    state: present
+    
 - name: Install all the Nerd fonts
   community.general.pacman:
     name: nerd-fonts
