@@ -108,6 +108,11 @@
     name: inkscape
     state: present
 
+- name: Install feh image viewer
+  community.general.pacman:
+    name: feh
+    state: present
+
 - name: Install Libre Office Fresh
   community.general.pacman:
     name: libreoffice-fresh
