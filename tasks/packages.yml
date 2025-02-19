@@ -62,7 +62,7 @@
   community.general.pacman:
     name: unzip
     state: present
-    
+
 - name: Install unrar
   community.general.pacman:
     name: unrar
@@ -72,7 +72,7 @@
   community.general.pacman:
     name: p7zip
     state: presen
-    
+
 - name: Install all the Nerd fonts
   community.general.pacman:
     name: nerd-fonts
@@ -241,4 +241,9 @@
 - name: CD Buring tools
   community.general.pacman:
     name: [cdrdao, gcdmaster]
+    state: present
+
+- name: Older USB formating tools
+  community.general.pacman:
+    name: [dosfstools]
     state: present
