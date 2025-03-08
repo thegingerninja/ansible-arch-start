@@ -19,4 +19,8 @@
   community.general.snap:
     name: opentofu
     classic: yes
-  
+
+- name: Install Python Astral uv using snap --classic
+  community.general.snap:
+    name: astral-uv
+    classic: yes
