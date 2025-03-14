@@ -247,3 +247,8 @@
   community.general.pacman:
     name: [dosfstools]
     state: present
+
+- name: Firefox
+  community.general.pacman:
+    name: [firefox]
+    state: present
