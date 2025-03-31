@@ -252,3 +252,8 @@
   community.general.pacman:
     name: [firefox]
     state: present
+
+- name: Vitual Webcam
+  community.general.pacman:
+    name: [v4l2loopback-dkms]
+    state: present
