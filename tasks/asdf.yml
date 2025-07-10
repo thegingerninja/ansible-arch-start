@@ -1,11 +1,8 @@
 - name: Clone ASDF
   become_user: "{{ username }}"
   ansible.builtin.git:
-    repo: "https://github.com/asdf-vm/asdf.git"
+    repo: https://github.com/asdf-vm/asdf.git
     dest: "/home/{{ username }}/.asdf"
-    version: "v0.18.0"
-    update: true
-    force: true
     recursive: true
 
 - name: Add ASDF init to .bashrc
