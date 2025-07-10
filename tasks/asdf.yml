@@ -8,18 +8,6 @@
     force: yes
     recursive: no
 
-- name: Checkout v0.18.0 tag explicitly
-  become_user: "{{ username }}"
-  command: git checkout v0.18.0
-  args:
-    chdir: "/home/{{ username }}/.asdf"
-
-- name: Update ASDF submodules
-  become_user: "{{ username }}"
-  command: git submodule update --init --recursive
-  args:
-    chdir: "/home/{{ username }}/.asdf"
-
 - name: Add ASDF init to .bashrc
   become_user: "{{ username }}"
   lineinfile:
@@ -30,3 +18,9 @@
   with_items:
     - ". $HOME/.asdf/asdf.sh"
     - ". $HOME/.asdf/completions/asdf.bash"
+
+- name: Update ASDF submodules
+  become_user: "{{ username }}"
+  command: git submodule update --init --recursive
+  args:
+    chdir: "/home/{{ username }}/.asdf"
