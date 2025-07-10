@@ -6,12 +6,9 @@
     version: "v0.18.0"
     recursive: yes
 
-- name: Add ASDF init to .bashrc
+- name: Install ASDF Go binary via go install
   become_user: "{{ username }}"
-  lineinfile:
-    path: "/home/{{ username }}/.bashrc"
-    line: "{{ item }}"
-    insertafter: EOF
-    create: yes
-  with_items:
-    - ". $HOME/.asdf/asdf.sh"
+  environment:
+    PATH: "/home/{{ username }}/go/bin:{{ ansible_env.PATH }}"
+  shell: |
+    go install github.com/asdf-vm/asdf/cmd/asdf@v0.18.0
