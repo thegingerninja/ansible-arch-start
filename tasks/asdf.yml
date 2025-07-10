@@ -8,7 +8,7 @@
 - name: Add ASDF init to .bashrc
   become_user: "{{ username }}"
   lineinfile:
-    path: "{{ ansible_env.HOME }}/.bashrc"
+    path: "/home/{{ username }}/.bashrc"
     line: "{{ item }}"
     insertafter: EOF
     create: yes
