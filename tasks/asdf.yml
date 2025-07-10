@@ -1,14 +1,26 @@
-# - name: Clone ASDF (no recursive submodules)
-#   become_user: "{{ username }}"
-#   ansible.builtin.git:
-#     repo: https://github.com/asdf-vm/asdf.git
-#     dest: "/home/{{ username }}/.asdf"
-#     version: "v0.18.0"
-#     recursive: yes
+- name: Ensure Go is installed (via pacman)
+  become: true
+  pacman:
+    name: go
+    state: present
 
-- name: Install ASDF Go binary via go install
+- name: Ensure Go bin path is in .bashrc
   become_user: "{{ username }}"
+  lineinfile:
+    path: "/home/{{ username }}/.bashrc"
+    line: 'export PATH="$HOME/go/bin:$PATH"'
+    insertafter: EOF
+
+- name: Install ASDF v0.18.0 using go install
+  become_user: "{{ username }}"
+  shell: go install github.com/asdf-vm/asdf/cmd/asdf@v0.18.0
   environment:
-    PATH: "/home/{{ username }}/go/bin:{{ ansible_env.PATH }}"
-  shell: |
-    go install github.com/asdf-vm/asdf/cmd/asdf@v0.18.0
+    PATH: "/usr/bin:/bin:/usr/local/bin:/home/{{ username }}/go/bin"
+
+- name: Add ASDF init to .bashrc (Go version)
+  become_user: "{{ username }}"
+  lineinfile:
+    path: "/home/{{ username }}/.bashrc"
+    line: ". $HOME/.asdf/lib/asdf.sh"
+    insertafter: EOF
+    create: yes
