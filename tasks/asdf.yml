@@ -8,6 +8,13 @@
     update: yes
     force: yes
 
+- name: Update submodules
+  become: true
+  become_user: "{{ username }}"
+  command: git submodule update --init --recursive
+  args:
+    chdir: "/home/{{ username }}/.asdf"
+
 - name: Add ASDF init to .bashrc
   become_user: "{{ username }}"
   lineinfile:
