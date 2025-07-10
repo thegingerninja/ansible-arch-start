@@ -1,0 +1,19 @@
+- name: Get ASDF version manager from github
+  become: true
+  become_user: "{{ username }}"
+  ansible.builtin.git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: "/home/{{ username }}/.asdf"
+    force: yes
+
+- name: Add ASDF init to .bashrc
+  become: true
+  become_user: "{{ username }}"
+  lineinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
+    line: "{{ item }}"
+    insertafter: EOF
+    create: yes
+  with_items:
+    - ". $HOME/.asdf/asdf.sh"
+    - ". $HOME/.asdf/completions/asdf.bash"
