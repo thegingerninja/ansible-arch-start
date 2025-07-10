@@ -1,14 +1,21 @@
-- name: Get ASDF version manager from github
+- name: Clone ASDF (no recursive submodules)
   become_user: "{{ username }}"
   ansible.builtin.git:
     repo: https://github.com/asdf-vm/asdf.git
     dest: "/home/{{ username }}/.asdf"
     version: "v0.18.0"
-    recursive: yes
     update: yes
     force: yes
+    recursive: no # 🔁 disable here; we'll do it manually
 
-- name: Update submodules
+- name: Checkout v0.18.0 tag explicitly
+  become: true
+  become_user: "{{ username }}"
+  command: git checkout v0.18.0
+  args:
+    chdir: "/home/{{ username }}/.asdf"
+
+- name: Update ASDF submodules
   become: true
   become_user: "{{ username }}"
   command: git submodule update --init --recursive
