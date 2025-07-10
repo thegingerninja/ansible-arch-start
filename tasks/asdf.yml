@@ -6,17 +6,15 @@
     version: "v0.18.0"
     update: yes
     force: yes
-    recursive: no # 🔁 disable here; we'll do it manually
+    recursive: no
 
 - name: Checkout v0.18.0 tag explicitly
-  become: true
   become_user: "{{ username }}"
   command: git checkout v0.18.0
   args:
     chdir: "/home/{{ username }}/.asdf"
 
 - name: Update ASDF submodules
-  become: true
   become_user: "{{ username }}"
   command: git submodule update --init --recursive
   args:
