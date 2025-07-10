@@ -1,9 +1,26 @@
-- name: Clone ASDF
+- name: Clone ASDF (no recursive submodules)
   become_user: "{{ username }}"
   ansible.builtin.git:
     repo: https://github.com/asdf-vm/asdf.git
     dest: "/home/{{ username }}/.asdf"
-    recursive: true
+    version: "v0.18.0"
+    update: yes
+    force: yes
+    recursive: no
+
+- name: Checkout v0.18.0 tag explicitly
+  become: true
+  become_user: "{{ username }}"
+  command: git checkout v0.18.0
+  args:
+    chdir: "/home/{{ username }}/.asdf"
+
+- name: Update ASDF submodules
+  become: true
+  become_user: "{{ username }}"
+  command: git submodule update --init --recursive
+  args:
+    chdir: "/home/{{ username }}/.asdf"
 
 - name: Add ASDF init to .bashrc
   become_user: "{{ username }}"
