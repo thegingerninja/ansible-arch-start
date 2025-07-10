@@ -16,11 +16,3 @@
   shell: go install github.com/asdf-vm/asdf/cmd/asdf@v0.18.0
   environment:
     PATH: "/usr/bin:/bin:/usr/local/bin:/home/{{ username }}/go/bin"
-
-- name: Add ASDF init to .bashrc (Go version)
-  become_user: "{{ username }}"
-  lineinfile:
-    path: "/home/{{ username }}/.bashrc"
-    line: ". $HOME/.asdf/lib/asdf.sh"
-    insertafter: EOF
-    create: yes
