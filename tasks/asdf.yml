@@ -8,7 +8,7 @@
   become_user: "{{ username }}"
   lineinfile:
     path: "/home/{{ username }}/.bashrc"
-    line: 'export PATH="$HOME/go/bin:$PATH"'
+    line: 'export PATH="$HOME/go/bin:$HOME/.asdf/shims:$PATH"'
     insertafter: EOF
 
 - name: Install ASDF v0.18.0 using go install
