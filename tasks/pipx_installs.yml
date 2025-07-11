@@ -9,3 +9,9 @@
   shell: pipx install credstash
   environment:
     PATH: "/usr/bin:/bin:/usr/local/bin:/home/{{ username }}/.local/bin"
+
+- name: Install AWS Command line tool via pipx
+  become_user: "{{ username }}"
+  shell: pipx install awscli
+  environment:
+    PATH: "/usr/bin:/bin:/usr/local/bin:/home/{{ username }}/.local/bin"
