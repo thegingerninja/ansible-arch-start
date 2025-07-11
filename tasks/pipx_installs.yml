@@ -1,0 +1,11 @@
+- name: Ensure pipx path setup with ensurepath
+  become_user: "{{ username }}"
+  shell: pipx ensurepath
+  environment:
+    PATH: "/usr/bin:/bin:/usr/local/bin:/home/{{ username }}/.local/bin"
+
+- name: Install credstash via pipx
+  become_user: "{{ username }}"
+  shell: pipx install credstash
+  environment:
+    PATH: "/usr/bin:/bin:/usr/local/bin:/home/{{ username }}/.local/bin"
