@@ -253,6 +253,16 @@
     name: [dosfstools]
     state: present
 
+- name: Android Phones etc Thunar linking
+  community.general.pacman:
+    name: [gvfs-mtp, gvfs-gphoto2, mtpfs]
+    state: present
+
+- name: iPhone and iPod usage
+  community.general.pacman:
+    name: [ifuse]
+    state: present
+
 - name: Firefox
   community.general.pacman:
     name: [firefox]
