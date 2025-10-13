@@ -272,3 +272,8 @@
   community.general.pacman:
     name: [v4l2loopback-dkms]
     state: present
+    
+- name: NTFS Drivers
+  community.general.pacman:
+    name: [ntfs-3g]
+    state: present
