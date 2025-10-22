@@ -277,3 +277,8 @@
   community.general.pacman:
     name: [ntfs-3g]
     state: present
+
+- name: nsxiv for viewing svg quickly
+  community.general.pacman:
+    name: [nsxiv]
+    state: present
