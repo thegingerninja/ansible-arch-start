@@ -282,3 +282,8 @@
   community.general.pacman:
     name: [nsxiv]
     state: present
+    
+- name: try out helix editor
+  community.general.pacman:
+    name: [helix]
+    state: present
