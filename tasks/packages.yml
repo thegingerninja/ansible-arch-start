@@ -282,6 +282,11 @@
   community.general.pacman:
     name: [nsxiv]
     state: present
+
+- name: Jujutsu git compatible VCS
+  community.general.pacman:
+    name: [jujutsu, lazyjj]
+    state: present
     
 - name: try out helix editor
   community.general.pacman:
