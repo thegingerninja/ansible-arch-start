@@ -49,7 +49,7 @@
     - import_tasks: tasks/ohmybash.yml
       vars:
         username: paul
-    - import_tasks: tasks/asdf.yml
+    - import_tasks: tasks/mise.yml
       vars:
         username: paul
     - import_tasks: tasks/pipx_installs.yml

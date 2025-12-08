@@ -1,0 +1,26 @@
+- name: Mise version management
+  community.general.pacman:
+    name: [mise]
+    state: present
+
+- name: Ensure mise data directory exists
+  file:
+    path: "/home/{{ username }}/.local/share/mise"
+    state: directory
+    mode: "0755"
+
+- name: Add Mise activation to bashrc
+  lineinfile:
+    path: "/home/{{ username }}/.bashrc"
+    regexp: "^eval.*mise activate bash"
+    line: 'eval "$(mise activate bash)"'
+    state: present
+
+- name: Add global tool versions for mise
+  copy:
+    dest: "{{ ansible_user_dir }}/.tool-versions"
+    content: |
+      nodejs 20
+      python "latest"
+      ruby 3.3
+      js "latest"
