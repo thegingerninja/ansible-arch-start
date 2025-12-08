@@ -18,7 +18,7 @@
 
 - name: Add global tool versions for mise
   copy:
-    dest: "{{ ansible_user_dir }}/.tool-versions"
+    dest: "/home/{{ username }}/.tool-versions"
     content: |
       nodejs 20
       python "latest"
