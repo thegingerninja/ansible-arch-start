@@ -130,7 +130,7 @@
 
 - name: Install Thunar File explorer
   community.general.pacman:
-    name: [thunar, thunar-volman, udisks2, udiskie]
+    name: [thunar, thunar-volman, udisks2, udiskie, tumbler]
     state: present
 
 - name: Install VLC
@@ -272,7 +272,7 @@
   community.general.pacman:
     name: [v4l2loopback-dkms]
     state: present
-    
+
 - name: NTFS Drivers
   community.general.pacman:
     name: [ntfs-3g]
@@ -287,7 +287,7 @@
   community.general.pacman:
     name: [jujutsu, lazyjj]
     state: present
-    
+
 - name: try out helix editor
   community.general.pacman:
     name: [helix]
