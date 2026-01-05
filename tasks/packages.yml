@@ -292,3 +292,8 @@
   community.general.pacman:
     name: [helix]
     state: present
+
+- name: Terraform
+  community.general.pacman:
+    name: [terraform]
+    state: present
