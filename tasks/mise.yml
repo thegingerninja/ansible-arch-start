@@ -5,12 +5,12 @@
 
 - name: Ensure mise data directory exists
   become: true
-  become_user: { { username } }
+  become_user: "{{username}}"
   file:
     path: "/home/{{ username }}/.local/share/mise"
     state: directory
-    owner: { { username } }
-    group: { { username } }
+    owner: "{{ username }}"
+    group: "{{ username }}"
     mode: "0755"
 
 - name: Add Mise activation to bashrc
