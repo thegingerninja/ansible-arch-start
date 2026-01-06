@@ -1,8 +1,8 @@
 - name: Install the Nvidia package
   community.general.pacman:
-    name: nvidia
+    name: nvidia-open
     state: present
-    
+
 - name: Install the Nvidia Settings tool
   community.general.pacman:
     name: nvidia-settings
