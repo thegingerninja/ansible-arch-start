@@ -1,6 +1,6 @@
 - name: Install Docker packages
   community.general.pacman:
-    name: ["docker", "docker-compose"]
+    name: ["docker", "docker-compose", "docker-buildx"]
     state: present
 
 - name: Make sure the docker group exists
