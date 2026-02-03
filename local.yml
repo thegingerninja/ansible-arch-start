@@ -55,3 +55,6 @@
     - import_tasks: tasks/pipx_installs.yml
       vars:
         username: paul
+    - import_tasks: tasks/homebrew.yml
+      vars:
+        username: paul
