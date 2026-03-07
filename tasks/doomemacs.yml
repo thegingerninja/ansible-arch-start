@@ -1,3 +1,8 @@
+- name: Install Doom Emacs dependencies
+  community.general.pacman:
+    name: [shellcheck, ripgrep, fd, git]
+    state: present
+
 - name: Load Doom Emacs from Github
   become_user: "{{ username }}"
   ansible.builtin.git:
