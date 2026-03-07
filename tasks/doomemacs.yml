@@ -10,3 +10,6 @@
   ansible.builtin.command: "/home/{{ username }}/.config/emacs/bin/doom install --force"
   args:
     creates: "/home/{{ username }}/.config/emacs/.local"
+  environment:
+    EMACS: "/home/linuxbrew/.linuxbrew/bin/emacs"
+    PATH: "/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/bin:/bin"
