@@ -297,3 +297,8 @@
   community.general.pacman:
     name: [terraform]
     state: present
+
+- name: Fast Find
+  community.general.pacman:
+    name: [fd]
+    state: present
