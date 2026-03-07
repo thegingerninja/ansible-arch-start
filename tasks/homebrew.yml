@@ -35,6 +35,7 @@
   community.general.homebrew:
     name:
       - k6
+      - emacs
     update_homebrew: true
     path: /home/linuxbrew/.linuxbrew/bin/brew
   environment:
