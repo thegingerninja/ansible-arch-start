@@ -58,3 +58,6 @@
     - import_tasks: tasks/homebrew.yml
       vars:
         username: paul
+    - import_tasks: tasks/doomemacs.yml
+      vars:
+        username: paul
