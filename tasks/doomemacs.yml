@@ -4,8 +4,6 @@
     repo: https://github.com/doomemacs/doomemacs
     dest: "/home/{{ username }}/.config/emacs"
     depth: 1
-    branch: master
-    update: yes
 
 - name: Run Doom Emacs install
   become_user: "{{ username }}"
