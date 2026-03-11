@@ -307,3 +307,8 @@
   community.general.pacman:
     name: [shfmt]
     state: present
+
+- name: Spell checker en-gb hunspell
+  community.general.pacman:
+    name: [hunspell, hunspell-en_gb]
+    state: present
