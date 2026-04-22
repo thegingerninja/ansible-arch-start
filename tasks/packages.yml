@@ -288,11 +288,6 @@
     name: [jujutsu, lazyjj]
     state: present
 
-- name: try out helix editor
-  community.general.pacman:
-    name: [helix]
-    state: present
-
 - name: Terraform
   community.general.pacman:
     name: [terraform]
@@ -311,4 +306,9 @@
 - name: Spell checker en-gb hunspell
   community.general.pacman:
     name: [hunspell, hunspell-en_gb]
+    state: present
+
+- name: KiCad PCB designer
+  community.general.pacman:
+    name: [kicad, kicad-library, kicad-library-3d]
     state: present
