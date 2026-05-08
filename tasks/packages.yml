@@ -312,3 +312,8 @@
   community.general.pacman:
     name: [kicad, kicad-library, kicad-library-3d]
     state: present
+
+- name: Markdown formater typst
+  community.general.pacman:
+    name: [typst]
+    state: present
