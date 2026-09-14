@@ -317,3 +317,13 @@
   community.general.pacman:
     name: [typst]
     state: present
+
+- name: DCC CI monitor controller
+  community.general.pacman:
+    name: [ddcutil]
+    state: present
+
+- name: FIDO Library for keys
+  community.general.pacman:
+    name: [libfido2]
+    state: present
