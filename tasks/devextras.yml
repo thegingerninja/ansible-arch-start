@@ -1,0 +1,4 @@
+- name: Tauri 2 dev
+  community.general.pacman:
+    name: [appmenu-gtk-module, libappindicator, xdotool, sqlcipher]
+    state: present
